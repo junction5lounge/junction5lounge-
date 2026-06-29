@@ -150,4 +150,3 @@ With the real Junction 5 Lounge **Paystack Public Key** from:
 ---
 
 *© 2026 Junction 5 Lounge · Adenta-West, Accra, Ghana*
-# junction5lounge-
