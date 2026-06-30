@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Junction 5 Lounge — Bar · Grill · Chill | Adenta-West, Accra</title>
+<meta name="description" content="Junction 5 Lounge — premium dining, handcrafted cocktails and electrifying live entertainment in Adenta-West, Accra. Reserve a table or order on WhatsApp.">
+<meta name="keywords" content="Junction 5 Lounge, Adenta restaurant, Adenta bar, live band Accra, karaoke Adenta, grill restaurant Accra">
+<meta property="og:title" content="Junction 5 Lounge — Bar · Grill · Chill">
+<meta property="og:description" content="Premium dining, handcrafted cocktails and live entertainment in Adenta-West, Accra.">
+<meta property="og:type" content="restaurant">
+<link rel="canonical" href="https://junction5lounge.com/">
+<link rel="icon" type="image/png" href="images/junction5-logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,700&family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ══ RESET & ROOT ══════════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{
+  background:#09070a;
+  color:#f0e6d3;
+  font-family:'Inter',system-ui,sans-serif;
+  font-weight:300;
+  line-height:1.6;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+
+/* ══ TOKENS ══════════════════════════════════════════════════════ */
+:root{
+  --black:#09070a;
+  --deep:#100d11;
+  --ink:#1a1520;
+  --ink2:#221828;
+  --gold:#c9923a;
+  --gold2:#e0b86a;
+  --gold3:#f2d898;
+  --cream:#f0e6d3;
+  --dim:#bfaa90;
+  --mute:#7a6a55;
+  --red:#c44a28;
+  --line:rgba(201,146,58,0.2);
+  --linef:rgba(240,230,211,0.07);
+}
+
+/* ══ TYPOGRAPHY ══════════════════════════════════════════════════ */
+.f-serif{font-family:'Playfair Display',Georgia,serif;}
+.f-caps{font-family:'Bebas Neue',sans-serif;letter-spacing:.22em;font-size:.75rem;color:var(--gold);}
+.f-caps-sm{font-family:'Bebas Neue',sans-serif;letter-spacing:.18em;font-size:.68rem;}
+
+/* ══ LAYOUT ══════════════════════════════════════════════════════ */
+.wrap{max-width:1180px;margin:0 auto;padding:0 5vw;}
+.pad{padding:6.5rem 5vw;}
+@media(max-width:680px){.pad{padding:4rem 5vw;}}
+
+/* ══ BUTTONS ══════════════════════════════════════════════════════ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  font-family:'Inter',sans-serif;font-weight:600;
+  font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+  padding:.95rem 2rem;border:none;cursor:pointer;
+  border-radius:0 !important;           /* FORCE sharp corners */
+  -webkit-border-radius:0 !important;
+  transition:all .28s ease;
+  white-space:nowrap;
+}
+.btn-gold{background:var(--gold);color:#09070a;}
+.btn-gold:hover{background:var(--gold2);box-shadow:0 0 32px rgba(201,146,58,.4);}
+.btn-outline{
+  background:transparent;color:var(--cream);
+  border:1px solid rgba(240,230,211,.35) !important;
+}
+.btn-outline:hover{border-color:var(--gold)!important;color:var(--gold3);}
+.btn-ghost{background:transparent;color:var(--gold2);border:1px solid var(--gold)!important;}
+.btn-ghost:hover{background:var(--gold);color:#09070a;}
+.btn-wa{background:#25D366;color:#fff;}
+.btn-wa:hover{background:#1bc05a;}
+.btn-sm{padding:.65rem 1.4rem;font-size:.68rem;}
+.btn-row{display:flex;flex-wrap:wrap;gap:.9rem;}
+
+/* ══ HEADER ══════════════════════════════════════════════════════ */
+#hdr{
+  position:fixed;inset:0 0 auto 0;z-index:500;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.3rem 5vw;
+  transition:all .35s ease;
+}
+#hdr::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(9,7,10,.85),transparent);
+  pointer-events:none;transition:opacity .35s;
+}
+#hdr.scrolled::before{
+  background:rgba(9,7,10,.96);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+}
+#hdr.scrolled{padding:.75rem 5vw;border-bottom:1px solid var(--line);}
+.hdr-logo{height:40px;width:auto;position:relative;z-index:1;display:block;}
+nav.desk{display:flex;align-items:center;gap:2rem;position:relative;z-index:1;}
+nav.desk a{
+  font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+  color:rgba(240,230,211,.6);transition:color .2s;
+}
+nav.desk a:hover{color:var(--cream);}
+.nav-res{
+  padding:.55rem 1.2rem;
+  border:1px solid var(--gold);
+  color:var(--gold2);
+  font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  font-family:'Inter';font-weight:600;cursor:pointer;background:transparent;
+  transition:all .22s;border-radius:0!important;
+}
+.nav-res:hover{background:var(--gold);color:#09070a;}
+.burger{
+  display:none;flex-direction:column;gap:5px;
+  cursor:pointer;background:none;border:none;
+  padding:4px;position:relative;z-index:1;
+}
+.burger span{width:22px;height:1px;background:var(--cream);display:block;transition:all .3s;}
+.mob-nav{
+  position:fixed;inset:0;background:rgba(9,7,10,.98);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:2.5rem;z-index:490;
+  transform:translateX(110%);transition:transform .45s cubic-bezier(.77,0,.18,1);
+}
+.mob-nav.open{transform:translateX(0);}
+.mob-nav a{
+  font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:400;
+  color:rgba(240,230,211,.5);transition:color .2s;
+}
+.mob-nav a:hover{color:var(--gold3);}
+@media(max-width:900px){nav.desk{display:none;}.burger{display:flex;}}
+
+/* ══ HERO ══════════════════════════════════════════════════════ */
+.hero{
+  position:relative;min-height:100svh;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  background:
+    linear-gradient(180deg,rgba(9,7,10,.3) 0%,rgba(9,7,10,.5) 45%,rgba(9,7,10,.95) 88%,#09070a 100%),
+    url('https://images.unsplash.com/photo-1514190051997-0f6f39ca5cde?w=1800&q=80') center/cover no-repeat;
+}
+.hero-inner{padding:0 5vw 5.5rem;max-width:820px;}
+.hero-rating{
+  display:inline-flex;align-items:center;gap:.7rem;
+  background:rgba(201,146,58,.12);
+  border:1px solid rgba(201,146,58,.3);
+  padding:.55rem 1.1rem;margin-bottom:2rem;
+}
+.hero-rating .stars{color:var(--gold);font-size:.85rem;letter-spacing:.06em;}
+.hero-rating span{font-size:.8rem;color:var(--dim);}
+.hero-rating b{color:var(--cream);}
+.hero-divider{
+  width:56px;height:1px;
+  background:linear-gradient(to right,var(--gold),transparent);
+  margin-bottom:1.8rem;
+}
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-weight:800;
+  font-size:clamp(3.2rem,9vw,7rem);
+  line-height:.95;
+  letter-spacing:-.02em;
+  color:var(--cream);
+  margin-bottom:1.4rem;
+}
+.hero h1 em{font-style:italic;color:var(--gold2);font-weight:700;}
+.hero-sub{
+  font-size:1rem;font-weight:300;color:var(--dim);
+  max-width:48ch;margin-bottom:1rem;line-height:1.7;
+}
+.hero-tagline{
+  font-family:'Bebas Neue',sans-serif;letter-spacing:.3em;
+  font-size:.82rem;color:var(--gold);margin-bottom:2.4rem;
+}
+.hero-venue{
+  display:flex;flex-wrap:wrap;gap:.8rem 2rem;
+  padding-top:2rem;margin-top:1.5rem;
+  border-top:1px solid var(--linef);
+  font-size:.75rem;letter-spacing:.05em;color:var(--mute);
+}
+.hero-venue span{display:flex;align-items:center;gap:.5rem;}
+
+/* ══ TICKER ══════════════════════════════════════════════════════ */
+.ticker{background:var(--gold);overflow:hidden;}
+.ticker-inner{
+  display:inline-flex;white-space:nowrap;
+  animation:ticker 38s linear infinite;
+}
+.ticker:hover .ticker-inner{animation-play-state:paused;}
+.ticker-inner span{
+  font-family:'Bebas Neue',sans-serif;letter-spacing:.16em;
+  font-size:.82rem;color:#09070a;
+  padding:.72rem 2.5rem;
+  display:inline-flex;align-items:center;gap:.7rem;
+}
+.ticker-inner span::before{content:'◆';font-size:.3rem;opacity:.5;}
+@keyframes ticker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* ══ SECTION HEADS ═══════════════════════════════════════════════ */
+.sec-label{
+  font-family:'Bebas Neue',sans-serif;letter-spacing:.22em;
+  font-size:.72rem;color:var(--gold);display:block;margin-bottom:.8rem;
+}
+.sec-h2{
+  font-family:'Playfair Display',serif;font-weight:700;
+  font-size:clamp(2.2rem,4.5vw,3.6rem);
+  color:var(--cream);line-height:1.05;letter-spacing:-.01em;
+}
+.sec-h2 em{font-style:italic;color:var(--gold2);}
+
+/* ══ EXPERIENCE ═════════════════════════════════════════════════ */
+#experience{background:var(--deep);}
+.exp-head{text-align:center;margin-bottom:4rem;}
+.exp-head .sec-h2{margin-top:.8rem;}
+.exp-head p{color:var(--dim);margin-top:1rem;max-width:50ch;margin-left:auto;margin-right:auto;font-size:.92rem;}
+.exp-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  border:1px solid var(--line);
+}
+@media(max-width:800px){.exp-grid{grid-template-columns:1fr;}}
+.exp-card{
+  padding:2.8rem 2.2rem;border-right:1px solid var(--line);
+  display:flex;flex-direction:column;gap:.9rem;
+  position:relative;overflow:hidden;
+  transition:background .3s;
+}
+.exp-card:last-child{border-right:none;}
+.exp-card::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:2px;
+  background:linear-gradient(to right,var(--gold),transparent);
+  transform:scaleX(0);transform-origin:left;transition:transform .35s ease;
+}
+.exp-card:hover{background:rgba(201,146,58,.04);}
+.exp-card:hover::after{transform:scaleX(1);}
+@media(max-width:800px){.exp-card{border-right:none;border-bottom:1px solid var(--line);}}
+.exp-icon{
+  width:52px;height:52px;
+  border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;margin-bottom:.4rem;
+}
+.exp-card h3{
+  font-family:'Playfair Display',serif;font-weight:600;
+  font-size:1.4rem;color:var(--cream);
+}
+.exp-card p{font-size:.85rem;color:var(--dim);line-height:1.72;}
+.exp-link{
+  margin-top:auto;padding-top:1.2rem;
+  border-top:1px solid var(--linef);
+  font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--gold);display:inline-flex;align-items:center;gap:.5rem;
+}
+.exp-link:hover{color:var(--gold2);}
+
+/* ══ STORY ═══════════════════════════════════════════════════════ */
+#story{background:var(--black);position:relative;overflow:hidden;}
+#story::before{
+  content:'';position:absolute;top:-300px;right:-300px;
+  width:700px;height:700px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,146,58,.05),transparent 65%);
+  pointer-events:none;
+}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+@media(max-width:800px){.story-grid{grid-template-columns:1fr;gap:3rem;}}
+.story-img-wrap{position:relative;}
+.story-img-wrap img{width:100%;height:580px;object-fit:cover;}
+.story-badge{
+  position:absolute;bottom:0;right:0;
+  background:var(--gold);color:#09070a;
+  padding:1.5rem 1.8rem;
+  font-family:'Playfair Display',serif;font-style:italic;
+  font-size:.9rem;font-weight:600;line-height:1.4;max-width:190px;
+}
+.story-copy{display:flex;flex-direction:column;gap:1rem;}
+.story-copy .sec-h2{margin-top:.8rem;margin-bottom:.4rem;}
+.story-copy p{font-size:.9rem;color:var(--dim);line-height:1.8;}
+.stats-row{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:var(--line);
+  margin-top:2rem;border-top:1px solid var(--line);
+}
+.stat{background:var(--black);padding:1.5rem;text-align:center;}
+.stat-n{
+  font-family:'Playfair Display',serif;font-weight:700;
+  font-size:2.2rem;color:var(--gold2);line-height:1;
+}
+.stat-l{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-top:.3rem;}
+
+/* ══ MENU ════════════════════════════════════════════════════════ */
+#menu{background:var(--deep);}
+.menu-top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem;flex-wrap:wrap;gap:1.5rem;}
+.menu-top .sec-h2{margin-top:.8rem;}
+.menu-top-r{font-size:.82rem;color:var(--dim);max-width:34ch;text-align:right;}
+@media(max-width:680px){.menu-top-r{text-align:left;}}
+.tabs{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:2.5rem;padding-bottom:1.2rem;border-bottom:1px solid var(--line);}
+.tab{
+  font-family:'Inter',sans-serif;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:.5rem 1rem;background:transparent;
+  border:1px solid rgba(240,230,211,.1);color:var(--mute);
+  cursor:pointer;transition:all .2s;border-radius:0!important;
+}
+.tab:hover{border-color:var(--gold);color:var(--dim);}
+.tab.on{background:var(--gold);border-color:var(--gold);color:#09070a;font-weight:600;}
+.panel{display:none;}
+.panel.on{display:block;animation:fu .4s ease;}
+@keyframes fu{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.dish-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:1px;background:var(--line);
+}
+@media(max-width:680px){.dish-grid{grid-template-columns:1fr;}}
+.dc{
+  background:var(--ink);display:flex;gap:1.1rem;
+  padding:1.3rem;transition:background .22s;
+  align-items:flex-start;
+}
+.dc:hover{background:var(--ink2);}
+.dc img{
+  width:84px;height:84px;object-fit:cover;flex-shrink:0;
+  filter:brightness(.95);
+}
+.dc-body{flex:1;min-width:0;}
+.dc-name{
+  font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;
+  color:var(--cream);margin-bottom:.25rem;line-height:1.2;
+}
+.dc-desc{font-size:.75rem;color:var(--mute);line-height:1.6;margin-bottom:.65rem;}
+.dc-foot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.4rem;}
+.dc-price{
+  font-family:'Bebas Neue',sans-serif;letter-spacing:.05em;
+  color:var(--gold2);font-size:1rem;
+}
+.add-btn{
+  font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:.32rem .75rem;border:1px solid var(--gold);
+  color:var(--gold);background:transparent;cursor:pointer;
+  font-family:'Inter';font-weight:600;transition:all .18s;
+  border-radius:0!important;
+}
+.add-btn:hover{background:var(--gold);color:#09070a;}
+.add-btn.added{background:#25D366;border-color:#25D366;color:#fff;}
+
+/* ══ RESERVE ════════════════════════════════════════════════════ */
+#reserve{
+  background:
+    linear-gradient(rgba(9,7,10,.9),rgba(9,7,10,.94)),
+    url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1400&q=80') center/cover no-repeat fixed;
+}
+.res-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:5rem;align-items:start;}
+@media(max-width:800px){.res-grid{grid-template-columns:1fr;gap:3rem;}}
+.res-copy .sec-h2{margin:.8rem 0 1rem;}
+.res-copy p{font-size:.88rem;color:var(--dim);line-height:1.8;margin-bottom:.9rem;}
+.res-perks li{
+  display:flex;gap:.8rem;font-size:.82rem;color:var(--dim);
+  padding:.55rem 0;border-bottom:1px solid var(--linef);
+}
+.res-perks li::before{content:'—';color:var(--gold);flex-shrink:0;}
+form#rform{
+  background:rgba(26,21,32,.92);
+  border:1px solid var(--line);padding:2.4rem;
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+}
+.field{margin-bottom:1rem;}
+.field label{
+  display:block;font-size:.65rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--gold2);margin-bottom:.4rem;
+  font-weight:600;
+}
+.field input,.field select,.field textarea{
+  width:100%;background:rgba(240,230,211,.04);
+  border:1px solid rgba(201,146,58,.2);color:var(--cream);
+  padding:.72rem .9rem;font-family:'Inter';font-size:.85rem;
+  border-radius:0!important;transition:border-color .2s;
+  -webkit-appearance:none;
+}
+.field input:focus,.field select:focus,.field textarea:focus{
+  border-color:var(--gold);outline:none;
+}
+.field select option{background:var(--ink);}
+.field textarea{resize:vertical;min-height:80px;}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+@media(max-width:500px){.frow{grid-template-columns:1fr;}}
+.fnote{font-size:.7rem;color:var(--mute);margin-top:.7rem;line-height:1.5;}
+#rform .btn{width:100%;margin-top:.4rem;}
+
+/* ══ GALLERY ════════════════════════════════════════════════════ */
+#gallery{background:var(--black);}
+.gal-head{margin-bottom:3rem;}
+.gal-head .sec-h2{margin-top:.8rem;}
+.gal-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-auto-rows:240px;
+  gap:3px;
+}
+@media(max-width:800px){.gal-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px;}}
+@media(max-width:500px){.gal-grid{grid-template-columns:1fr;grid-auto-rows:220px;}}
+.gi{position:relative;overflow:hidden;background:var(--ink);}
+.gi.tall{grid-row:span 2;}
+.gi.wide{grid-column:span 2;}
+.gi img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .6s ease,filter .35s;filter:brightness(.88);
+}
+.gi:hover img{transform:scale(1.06);filter:brightness(1);}
+.gi-label{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:.7rem .9rem;
+  background:linear-gradient(transparent,rgba(9,7,10,.7));
+  font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--dim);
+}
+
+/* ══ EVENTS ════════════════════════════════════════════════════ */
+#events{background:var(--deep);}
+.ev-top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem;flex-wrap:wrap;gap:1.5rem;}
+.ev-top .sec-h2{margin-top:.8rem;}
+.ev-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:var(--line);
+}
+@media(max-width:800px){.ev-grid{grid-template-columns:1fr;}}
+.ec{
+  background:var(--ink);padding:2rem 1.8rem;
+  transition:background .3s;position:relative;overflow:hidden;
+}
+.ec::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(to right,var(--gold),transparent);
+  transform:scaleX(0);transform-origin:left;transition:transform .3s;
+}
+.ec:hover{background:var(--ink2);}
+.ec:hover::before{transform:scaleX(1);}
+.ec-tag{
+  font-family:'Bebas Neue',sans-serif;letter-spacing:.14em;
+  font-size:.72rem;color:var(--red);margin-bottom:.6rem;display:block;
+}
+.ec h3{
+  font-family:'Playfair Display',serif;font-weight:600;
+  font-size:1.35rem;color:var(--cream);margin-bottom:.6rem;
+}
+.ec p{font-size:.82rem;color:var(--dim);line-height:1.68;}
+.ec-when{
+  margin-top:1.3rem;padding-top:1.1rem;border-top:1px solid var(--linef);
+  font-size:.68rem;letter-spacing:.07em;text-transform:uppercase;color:var(--gold);
+}
+
+/* ══ REVIEWS ════════════════════════════════════════════════════ */
+#reviews{background:var(--black);}
+.rev-head{text-align:center;margin-bottom:3.5rem;}
+.rev-head .sec-h2{margin-top:.8rem;}
+.g-pill{
+  display:inline-flex;align-items:center;gap:.7rem;
+  background:rgba(201,146,58,.08);border:1px solid var(--line);
+  padding:.5rem 1.2rem;font-size:.8rem;color:var(--dim);margin-top:.9rem;
+}
+.g-pill b{color:var(--gold2);}
+.rev-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:var(--line);
+}
+@media(max-width:800px){.rev-grid{grid-template-columns:1fr;}}
+.rc{background:var(--ink);padding:2rem;}
+.rc-stars{color:var(--gold);letter-spacing:.1em;font-size:.88rem;margin-bottom:.8rem;}
+.rc p{font-size:.85rem;color:var(--dim);line-height:1.75;margin-bottom:1.2rem;}
+.rc-auth{display:flex;align-items:center;gap:.7rem;font-size:.78rem;color:var(--cream);}
+.rc-av{
+  width:32px;height:32px;border-radius:50%;
+  background:var(--gold);color:#09070a;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;
+}
+.budget{
+  margin-top:2.5rem;padding:2rem;
+  border:1px solid var(--line);background:rgba(201,146,58,.04);
+  display:flex;flex-wrap:wrap;gap:2rem;align-items:center;
+}
+.budget span{display:flex;flex-direction:column;gap:.2rem;font-size:.82rem;color:var(--dim);}
+.budget span b{color:var(--gold2);}
+.budget-note{margin-left:auto;font-size:.7rem;color:var(--mute);}
+
+/* ══ CONTACT ════════════════════════════════════════════════════ */
+#contact{
+  background:
+    linear-gradient(rgba(9,7,10,.95),rgba(9,7,10,.97)),
+    url('https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=1400&q=80') center/cover no-repeat;
+}
+.con-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
+@media(max-width:800px){.con-grid{grid-template-columns:1fr;gap:3rem;}}
+.con-copy .sec-h2{margin:.8rem 0 1rem;}
+.con-copy p{font-size:.88rem;color:var(--dim);line-height:1.8;max-width:40ch;}
+.con-list{margin-top:1.8rem;}
+.con-list li{
+  display:flex;gap:.8rem;font-size:.83rem;color:var(--dim);
+  padding:.5rem 0;border-bottom:1px solid var(--linef);
+}
+.cta-col{display:flex;flex-direction:column;gap:.8rem;margin-top:1.4rem;}
+.cta-col .btn{justify-content:center;}
+.soc{display:flex;gap:.7rem;margin-top:1.8rem;}
+.soc a{
+  width:38px;height:38px;border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.68rem;letter-spacing:.04em;color:var(--dim);
+  transition:all .22s;
+}
+.soc a:hover{border-color:var(--gold);color:var(--gold);}
+.map-wrap{border:1px solid var(--line);}
+.map-wrap iframe{width:100%;height:340px;border:0;filter:grayscale(.35)contrast(1.05);}
+.map-link{
+  display:flex;align-items:center;gap:.5rem;
+  padding:.7rem 1rem;border:1px solid var(--line);border-top:none;
+  font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--gold2);
+}
+.map-link:hover{background:rgba(201,146,58,.07);}
+
+/* ══ FOOTER ════════════════════════════════════════════════════ */
+footer{
+  background:#060407;
+  padding:1.8rem 5vw;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:1rem;
+  border-top:1px solid var(--line);
+}
+.f-logo{height:28px;width:auto;opacity:.75;}
+.f-r{font-size:.7rem;color:var(--mute);text-align:right;}
+.f-r a{color:var(--gold);text-decoration:underline;}
+
+/* ══ FLOAT BUTTONS ═════════════════════════════════════════════ */
+.fl-wa{
+  position:fixed;bottom:1.5rem;right:1.5rem;z-index:400;
+  width:52px;height:52px;border-radius:50%!important;
+  background:#25D366;color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:1.3rem;
+  box-shadow:0 6px 24px rgba(0,0,0,.45);transition:transform .2s;
+}
+.fl-wa:hover{transform:scale(1.1);}
+.fl-cart{
+  position:fixed;bottom:1.5rem;right:4.8rem;z-index:400;
+  width:52px;height:52px;border-radius:50%!important;
+  background:var(--gold);color:#09070a;
+  display:flex;align-items:center;justify-content:center;font-size:1.2rem;
+  box-shadow:0 6px 24px rgba(201,146,58,.35);cursor:pointer;border:none;
+  transition:transform .2s;
+}
+.fl-cart:hover{transform:scale(1.1);}
+.c-badge{
+  position:absolute;top:-4px;right:-4px;
+  background:var(--red);color:#fff;
+  font-family:'Bebas Neue';font-size:.7rem;
+  width:19px;height:19px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+}
+
+/* ══ TOAST NOTIFICATION ═══════════════════════════════════════ */
+.toast{
+  position:fixed;bottom:5.5rem;right:1.5rem;z-index:800;
+  background:var(--gold);color:#09070a;
+  padding:.7rem 1.2rem;font-size:.75rem;font-weight:600;
+  letter-spacing:.06em;text-transform:uppercase;
+  display:flex;align-items:center;gap:.5rem;
+  transform:translateY(120%);opacity:0;
+  transition:all .35s cubic-bezier(.34,1.56,.64,1);
+  pointer-events:none;border-left:3px solid #09070a;
+}
+.toast.show{transform:translateY(0);opacity:1;}
+
+/* ══ CART BAR (sticky bottom banner) ════════════════════════ */
+.cart-bar{
+  position:fixed;bottom:0;left:0;right:0;z-index:399;
+  background:var(--gold);color:#09070a;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.9rem 5vw;
+  transform:translateY(100%);transition:transform .35s ease;
+}
+.cart-bar.show{transform:translateY(0);}
+.cart-bar-left{display:flex;align-items:center;gap:.8rem;}
+.cart-bar-count{
+  background:#09070a;color:var(--gold);
+  width:26px;height:26px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:.75rem;font-weight:700;
+}
+.cart-bar-label{font-size:.82rem;font-weight:600;letter-spacing:.04em;}
+.cart-bar-total{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;}
+.cart-bar-btn{
+  background:#09070a;color:var(--gold);
+  padding:.55rem 1.2rem;
+  font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  border:none;cursor:pointer;border-radius:0!important;
+}
+
+/* ══ MODALS ════════════════════════════════════════════════════ */
+.ov{
+  position:fixed;inset:0;z-index:600;
+  background:rgba(9,7,10,.88);
+  display:none;align-items:flex-end;justify-content:flex-end;
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+}
+.ov.open{display:flex;}
+.ov.center{align-items:center;justify-content:center;padding:1rem;}
+.drawer{
+  width:100%;max-width:420px;height:100%;
+  background:var(--ink);border-left:1px solid var(--line);
+  padding:1.8rem;overflow-y:auto;display:flex;flex-direction:column;
+}
+.dh{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;}
+.dh h3{font-family:'Playfair Display',serif;font-size:1.35rem;color:var(--cream);}
+.dx{background:none;border:none;color:var(--dim);font-size:1.5rem;cursor:pointer;line-height:1;}
+.c-empty{color:var(--mute);font-size:.85rem;padding:2.5rem 0;text-align:center;}
+.ci{display:flex;gap:.8rem;align-items:center;padding:.85rem 0;border-bottom:1px solid var(--linef);}
+.ci-i{flex:1;}
+.ci-n{font-size:.88rem;color:var(--cream);}
+.ci-p{font-size:.72rem;color:var(--gold);}
+.qty{display:flex;align-items:center;gap:.45rem;margin-left:auto;}
+.qty button{width:28px;height:28px;border:1px solid var(--line);background:transparent;color:var(--cream);cursor:pointer;font-size:1rem;border-radius:0!important;}
+.qty span{min-width:18px;text-align:center;font-size:.88rem;}
+.ci-rm{background:none;border:none;color:var(--mute);font-size:.68rem;cursor:pointer;text-decoration:underline;margin-left:.5rem;}
+.c-foot{margin-top:auto;padding-top:1.3rem;border-top:1px solid var(--line);}
+.c-fee-row{display:flex;justify-content:space-between;font-size:.8rem;color:var(--dim);margin-bottom:.4rem;}
+.c-tot{display:flex;justify-content:space-between;font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--cream);margin-bottom:.9rem;padding-top:.6rem;border-top:1px solid var(--linef);}
+.c-note{font-size:.68rem;color:var(--mute);margin-bottom:.9rem;line-height:1.5;}
+.c-foot .btn{width:100%;}
+
+/* delivery toggle */
+.dtype{display:flex;gap:1px;margin-bottom:1.2rem;background:var(--line);}
+.dtype-btn{
+  flex:1;padding:.65rem;text-align:center;
+  font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;
+  background:var(--ink2);color:var(--mute);cursor:pointer;border:none;
+  transition:all .2s;border-radius:0!important;
+}
+.dtype-btn.on{background:var(--gold);color:#09070a;}
+.delivery-badge{
+  display:inline-flex;align-items:center;gap:.4rem;
+  background:rgba(201,146,58,.1);border:1px solid var(--line);
+  padding:.35rem .8rem;font-size:.72rem;color:var(--gold2);margin-bottom:1rem;
+}
+
+.modal{
+  width:100%;max-width:440px;background:var(--ink);
+  border:1px solid var(--line);padding:2rem;max-height:92vh;overflow-y:auto;
+}
+.modal h3{font-family:'Playfair Display',serif;font-size:1.35rem;color:var(--cream);margin-bottom:.4rem;}
+.modal .sub{font-size:.8rem;color:var(--dim);margin-bottom:1.5rem;line-height:1.6;}
+.m-amt{font-family:'Bebas Neue',sans-serif;font-size:2.4rem;letter-spacing:.04em;color:var(--gold2);margin-bottom:.3rem;}
+.m-amt-break{font-size:.72rem;color:var(--mute);margin-bottom:1.2rem;line-height:1.6;}
+.modal .btn{width:100%;margin-top:.4rem;}
+.m-cancel{display:block;text-align:center;margin-top:.9rem;font-size:.72rem;color:var(--mute);cursor:pointer;background:none;border:none;width:100%;text-decoration:underline;}
+.confirm-c{text-align:center;}
+.confirm-c .ico{font-size:2.8rem;margin-bottom:.8rem;}
+.confirm-ref{font-size:.75rem;color:var(--mute);margin-bottom:1.3rem;font-family:monospace;}
+.confirm-c .btn{justify-content:center;}
+.conf-acts{display:flex;flex-direction:column;gap:.7rem;margin-top:1rem;}
+.conf-summary{
+  background:rgba(201,146,58,.08);border:1px solid var(--line);
+  padding:1rem;font-size:.78rem;color:var(--dim);
+  text-align:left;margin-bottom:1rem;line-height:1.7;
+}
+</style>
+</head>
+<body>
+
+<!-- ══ HEADER ══════════════════════════════════════════════════ -->
+<header id="hdr">
+  <a href="#home"><img src="images/junction5-logo-full.png" alt="Junction 5 Lounge" class="hdr-logo"></a>
+  <nav class="desk">
+    <a href="#experience">Experience</a>
+    <a href="#story">Story</a>
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#events">Events</a>
+    <a href="#contact">Contact</a>
+    <a href="#reserve" class="nav-res">Reserve a Table</a>
+  </nav>
+  <button class="burger" id="burger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav class="mob-nav" id="mob">
+  <a href="#experience" class="ml">Experience</a>
+  <a href="#story" class="ml">Story</a>
+  <a href="#menu" class="ml">Menu</a>
+  <a href="#gallery" class="ml">Gallery</a>
+  <a href="#events" class="ml">Events</a>
+  <a href="#reserve" class="ml">Reserve</a>
+  <a href="#contact" class="ml">Contact</a>
+</nav>
+
+<!-- ══ HERO ═══════════════════════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-rating">
+      <span class="stars">★★★★☆</span>
+      <span><b>4.4</b> · 385+ reviews on Google</span>
+    </div>
+    <div class="hero-tagline">Bar · Grill · Chill</div>
+    <div class="hero-divider"></div>
+    <h1>Where Accra<br>Comes <em>Alive</em><br>at Night</h1>
+    <p class="hero-sub">Premium dining, handcrafted cocktails, and electrifying live entertainment in one unforgettable venue in Adenta-West.</p>
+    <div class="btn-row">
+      <a href="#reserve" class="btn btn-gold">Reserve Your Table →</a>
+      <a href="#menu" class="btn btn-outline">Explore Our Menu</a>
+    </div>
+    <div class="hero-venue">
+      <span>📍 Angel View, Adenta-West</span>
+      <span>🕒 Mon–Sat 12PM · Sun 10:30AM</span>
+      <span>🎵 Live Bands &amp; DJ Nights</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TICKER ═════════════════════════════════════════════════ -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span>Live Band Every Friday · 9PM</span>
+    <span>Karaoke Night · Every Saturday · 8PM</span>
+    <span>DJ Sets Every Thursday – Sunday</span>
+    <span>Happy Hour Mon – Wed · 5–7PM</span>
+    <span>Birthday &amp; Anniversary Packages Available</span>
+    <span>Live Band Every Friday · 9PM</span>
+    <span>Karaoke Night · Every Saturday · 8PM</span>
+    <span>DJ Sets Every Thursday – Sunday</span>
+    <span>Happy Hour Mon – Wed · 5–7PM</span>
+    <span>Birthday &amp; Anniversary Packages Available</span>
+  </div>
+</div>
+
+<!-- ══ EXPERIENCE ════════════════════════════════════════════ -->
+<section class="pad" id="experience">
+  <div class="wrap">
+    <div class="exp-head">
+      <span class="sec-label">The Junction 5 Experience</span>
+      <h2 class="sec-h2">Three Rooms,<br><em>One Unforgettable Night</em></h2>
+      <p>Every element of Junction 5 is designed to take you somewhere extraordinary.</p>
+    </div>
+    <div class="exp-grid">
+      <div class="exp-card">
+        <div class="exp-icon">🍽️</div>
+        <h3>Exceptional Dining</h3>
+        <p>From sizzling jollof rice to perfectly grilled tilapia, our kitchen serves bold Ghanaian flavours alongside international classics. Every dish is crafted fresh to order.</p>
+        <a href="#menu" class="exp-link">View Menu →</a>
+      </div>
+      <div class="exp-card">
+        <div class="exp-icon">🍸</div>
+        <h3>Signature Cocktails</h3>
+        <p>Our bar is legendary. Sip on expertly mixed cocktails, premium spirits, local beers, or refreshing mocktails in an atmosphere that transforms from casual lunch to electric nightlife.</p>
+        <a href="#menu" class="exp-link">Drink Menu →</a>
+      </div>
+      <div class="exp-card">
+        <div class="exp-icon">🎶</div>
+        <h3>Live Entertainment</h3>
+        <p>Live bands, karaoke nights, and DJ sets keep the energy soaring. Whether it's a birthday celebration or a casual night out, the vibe here is unmatched in Adenta.</p>
+        <a href="#events" class="exp-link">Upcoming Events →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ STORY ══════════════════════════════════════════════════ -->
+<section class="pad" id="story">
+  <div class="wrap story-grid">
+    <div class="story-img-wrap">
+      <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&q=80" alt="Junction 5 Lounge interior">
+      <div class="story-badge">"The heartbeat of Adenta nights"</div>
+    </div>
+    <div class="story-copy">
+      <span class="sec-label">Our Story</span>
+      <h2 class="sec-h2">The Heartbeat of<br><em>Adenta Nights</em></h2>
+      <p>Nestled in the vibrant Adenta neighbourhood, Junction 5 Lounge was born from a simple idea: Accra deserves a venue where great food, creative cocktails, and live music converge in one unforgettable space.</p>
+      <p>Whether you're stopping by for lunch, gathering with friends for dinner, or celebrating into the early hours, every visit feels like an occasion. Our warm, moody interiors set the stage, our live bands and DJs keep the energy high, and our kitchen delivers plate after plate of flavour.</p>
+      <div class="stats-row">
+        <div class="stat"><div class="stat-n">4.4★</div><div class="stat-l">Star Rating</div></div>
+        <div class="stat"><div class="stat-n">385+</div><div class="stat-l">Reviews</div></div>
+        <div class="stat"><div class="stat-n">7</div><div class="stat-l">Days Open</div></div>
+      </div>
+      <div class="btn-row" style="margin-top:2rem;">
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MENU ═══════════════════════════════════════════════════ -->
+<section class="pad" id="menu">
+  <div class="wrap">
+    <div class="menu-top">
+      <div>
+        <span class="sec-label">Our Kitchen</span>
+        <h2 class="sec-h2">Served Every Day,<br><em>Made Fresh to Order</em></h2>
+      </div>
+      <p class="menu-top-r">Prices in GH₵. Ask your server about today's specials.</p>
+    </div>
+    <div class="tabs">
+      <button class="tab on" data-t="sig">Signature Dishes</button>
+      <button class="tab" data-t="loc">Local Dishes</button>
+      <button class="tab" data-t="rice">Rice Dishes</button>
+      <button class="tab" data-t="wrap">Wraps &amp; Sides</button>
+      <button class="tab" data-t="burg">Burgers</button>
+      <button class="tab" data-t="piz">Pizza</button>
+      <button class="tab" data-t="drk">Drinks</button>
+      <button class="tab" data-t="bar">Bar &amp; Spirits</button>
+    </div>
+
+    <div class="panel on" data-p="sig">
+      <div class="dish-grid">
+        <div class="dc" data-name="Jollof Rice &amp; Grilled Chicken" data-price="60"><img src="images/jollof-chicken.jpg" alt="Jollof Rice and Grilled Chicken"><div class="dc-body"><div class="dc-name">Jollof Rice &amp; Grilled Chicken</div><div class="dc-desc">Ghana's favourite — smoky, spicy jollof paired with perfectly grilled, seasoned chicken. Bold, comforting, and iconic.</div><div class="dc-foot"><span class="dc-price">GH₵ 60–90</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+        <div class="dc" data-name="Jollof Rice &amp; Beef" data-price="65"><img src="images/jollof-beef.jpg" alt="Jollof Rice and Beef"><div class="dc-body"><div class="dc-name">Jollof Rice &amp; Beef</div><div class="dc-desc">Rich, slow-cooked tomato rice served with tender marinated beef. Deep flavour that satisfies every craving.</div><div class="dc-foot"><span class="dc-price">GH₵ 65–95</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+        <div class="dc" data-name="Fried Rice &amp; Chicken" data-price="60"><img src="images/fried-rice-chicken.jpg" alt="Fried Rice and Chicken"><div class="dc-body"><div class="dc-name">Fried Rice &amp; Chicken</div><div class="dc-desc">Fragrant fried rice tossed with fresh vegetables and served with juicy grilled chicken — a timeless combo.</div><div class="dc-foot"><span class="dc-price">GH₵ 60–90</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+        <div class="dc" data-name="Fried Rice &amp; Beef" data-price="65"><img src="images/fried-rice-beef.jpg" alt="Fried Rice and Beef"><div class="dc-body"><div class="dc-name">Fried Rice &amp; Beef</div><div class="dc-desc">Wok-fried rice with colourful veggies paired with tender marinated beef strips. Light yet deeply satisfying.</div><div class="dc-foot"><span class="dc-price">GH₵ 65–95</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+        <div class="dc" data-name="Banku &amp; Whole Tilapia" data-price="90"><img src="images/banku-tilapia.jpg" alt="Banku and Tilapia"><div class="dc-body"><div class="dc-name">Banku &amp; Whole Tilapia</div><div class="dc-desc">Smooth fermented corn-and-cassava dough served with a whole chargrilled tilapia and zesty pepper sauce.</div><div class="dc-foot"><span class="dc-price">GH₵ 90–180</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+        <div class="dc" data-name="Banku &amp; Grilled Chicken" data-price="80"><img src="images/banku-chicken.jpg" alt="Banku and Grilled Chicken"><div class="dc-body"><div class="dc-name">Banku &amp; Grilled Chicken</div><div class="dc-desc">Classic banku paired with succulent grilled chicken — a lighter take on Accra's favourite duo.</div><div class="dc-foot"><span class="dc-price">GH₵ 80–120</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+        <div class="dc" data-name="Yam Chips &amp; Chicken" data-price="60"><img src="images/yam-chips-chicken.jpg" alt="Yam Chips and Chicken"><div class="dc-body"><div class="dc-name">Yam Chips &amp; Chicken</div><div class="dc-desc">Crispy fried yam chips served alongside juicy grilled chicken. Crunchy, hearty, and deeply Ghanaian.</div><div class="dc-foot"><span class="dc-price">GH₵ 60–90</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+        <div class="dc" data-name="Chicken Wings (6–8 pcs)" data-price="50"><img src="images/chicken-wings.jpg" alt="Chicken Wings"><div class="dc-body"><div class="dc-name">Chicken Wings (6–8 pcs)</div><div class="dc-desc">Golden, saucy, and finger-licking good. Marinated overnight and grilled to perfection.</div><div class="dc-foot"><span class="dc-price">GH₵ 50–80</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+      </div>
+    </div>
+    <div class="panel" data-p="loc">
+      <div class="dish-grid">
+        <div class="dc" data-name="Grilled Whole Tilapia" data-price="90"><img src="images/grilled-tilapia.jpg" alt="Grilled Tilapia"><div class="dc-body"><div class="dc-name">Grilled Whole Tilapia</div><div class="dc-desc">A whole fresh tilapia, chargrilled with our house spice blend and served with your choice of sides.</div><div class="dc-foot"><span class="dc-price">GH₵ 90–180</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+        <div class="dc" data-name="Peppered Gizzard" data-price="50"><img src="images/peppered-gizzard.jpg" alt="Peppered Gizzard"><div class="dc-body"><div class="dc-name">Peppered Gizzard</div><div class="dc-desc">Spicy, savoury, and addictive — chicken gizzard stir-fried with onions, peppers, and a kick of Scotch bonnet.</div><div class="dc-foot"><span class="dc-price">GH₵ 50–80</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+        <div class="dc" data-name="Beef Kebab" data-price="25"><img src="images/beef-kebab.jpg" alt="Beef Kebab"><div class="dc-body"><div class="dc-name">Beef Kebab</div><div class="dc-desc">Tender cubes of marinated beef threaded onto skewers and grilled over an open flame. Smoky and bold.</div><div class="dc-foot"><span class="dc-price">GH₵ 25–40</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+        <div class="dc" data-name="Yam Chips &amp; Chicken" data-price="60"><img src="images/yam-chips-chicken.jpg" alt="Yam Chips"><div class="dc-body"><div class="dc-name">Yam Chips &amp; Chicken</div><div class="dc-desc">Crispy fried yam chips served alongside juicy grilled chicken. Crunchy, hearty, and deeply Ghanaian.</div><div class="dc-foot"><span class="dc-price">GH₵ 60–90</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+      </div>
+    </div>
+    <div class="panel" data-p="rice">
+      <div class="dish-grid">
+        <div class="dc" data-name="Jollof Rice &amp; Grilled Chicken" data-price="60"><img src="images/jollof-chicken.jpg" alt="Jollof Rice"><div class="dc-body"><div class="dc-name">Jollof Rice &amp; Grilled Chicken</div><div class="dc-desc">Smoky, spicy jollof paired with perfectly grilled, seasoned chicken.</div><div class="dc-foot"><span class="dc-price">GH₵ 60–90</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+        <div class="dc" data-name="Jollof Rice &amp; Beef" data-price="65"><img src="images/jollof-beef.jpg" alt="Jollof Beef"><div class="dc-body"><div class="dc-name">Jollof Rice &amp; Beef</div><div class="dc-desc">Rich tomato rice with tender marinated beef. Deep flavour that satisfies every craving.</div><div class="dc-foot"><span class="dc-price">GH₵ 65–95</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+        <div class="dc" data-name="Fried Rice &amp; Chicken" data-price="60"><img src="images/fried-rice-chicken.jpg" alt="Fried Rice"><div class="dc-body"><div class="dc-name">Fried Rice &amp; Chicken</div><div class="dc-desc">Fragrant fried rice tossed with fresh vegetables, served with juicy grilled chicken.</div><div class="dc-foot"><span class="dc-price">GH₵ 60–90</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+        <div class="dc" data-name="Fried Rice &amp; Beef" data-price="65"><img src="images/fried-rice-beef.jpg" alt="Fried Rice Beef"><div class="dc-body"><div class="dc-name">Fried Rice &amp; Beef</div><div class="dc-desc">Wok-fried rice with colourful veggies paired with tender marinated beef strips.</div><div class="dc-foot"><span class="dc-price">GH₵ 65–95</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+      </div>
+    </div>
+    <div class="panel" data-p="wrap">
+      <div class="dish-grid">
+        <div class="dc" data-name="Chicken Shawarma" data-price="45"><img src="images/chicken-shawarma.jpg" alt="Chicken Shawarma"><div class="dc-body"><div class="dc-name">Chicken Shawarma</div><div class="dc-desc">Warm flatbread packed with spiced grilled chicken, crisp lettuce, cucumber, tomato, and creamy garlic sauce.</div><div class="dc-foot"><span class="dc-price">GH₵ 45–70</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+        <div class="dc" data-name="Beef Shawarma" data-price="50"><img src="images/beef-shawarma.jpg" alt="Beef Shawarma"><div class="dc-body"><div class="dc-name">Beef Shawarma</div><div class="dc-desc">Tender, well-spiced beef strips rolled in a soft wrap with fresh veg and our signature sauce.</div><div class="dc-foot"><span class="dc-price">GH₵ 50–75</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+        <div class="dc" data-name="Club Sandwich" data-price="50"><img src="images/club-sandwich.jpg" alt="Club Sandwich"><div class="dc-body"><div class="dc-name">Club Sandwich</div><div class="dc-desc">Stacked classic — layered meats, lettuce, tomato and mayo, served with fries.</div><div class="dc-foot"><span class="dc-price">GH₵ 50–80</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+        <div class="dc" data-name="French Fries &amp; Chicken" data-price="60"><img src="images/fries-chicken.jpg" alt="Fries and Chicken"><div class="dc-body"><div class="dc-name">French Fries &amp; Chicken</div><div class="dc-desc">Crispy golden fries paired with grilled or fried chicken. A crowd-pleaser every time.</div><div class="dc-foot"><span class="dc-price">GH₵ 60–90</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+        <div class="dc" data-name="Caesar / Garden Salad" data-price="45"><img src="images/caesar-salad.jpg" alt="Caesar Salad"><div class="dc-body"><div class="dc-name">Caesar / Garden Salad</div><div class="dc-desc">Fresh greens, cherry tomatoes, croutons, choice of dressing. Light, crisp, and vibrant.</div><div class="dc-foot"><span class="dc-price">GH₵ 45–70</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+      </div>
+    </div>
+    <div class="panel" data-p="burg">
+      <div class="dish-grid">
+        <div class="dc" data-name="Beef Burger" data-price="70"><img src="images/beef-burger.jpg" alt="Beef Burger"><div class="dc-body"><div class="dc-name">Beef Burger</div><div class="dc-desc">Juicy beef patty, cheddar cheese, house sauce and crisp salad. Served with a side of fries.</div><div class="dc-foot"><span class="dc-price">GH₵ 70–110</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+        <div class="dc" data-name="Chicken Burger" data-price="70"><img src="images/chicken-burger.jpg" alt="Chicken Burger"><div class="dc-body"><div class="dc-name">Chicken Burger</div><div class="dc-desc">Crispy fried or grilled chicken, fresh slaw, and our secret sauce. Served with fries.</div><div class="dc-foot"><span class="dc-price">GH₵ 70–110</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+      </div>
+    </div>
+    <div class="panel" data-p="piz">
+      <div class="dish-grid">
+        <div class="dc" data-name="Pizza (Medium)" data-price="90"><img src="images/pizza-medium.jpg" alt="Medium Pizza"><div class="dc-body"><div class="dc-name">Pizza (Medium)</div><div class="dc-desc">Choice of toppings, freshly baked. Great for one or sharing between two.</div><div class="dc-foot"><span class="dc-price">GH₵ 90–140</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+        <div class="dc" data-name="Pizza (Large)" data-price="130"><img src="images/pizza-large.jpg" alt="Large Pizza"><div class="dc-body"><div class="dc-name">Pizza (Large)</div><div class="dc-desc">Sharing size. Choose your toppings — great for the whole table.</div><div class="dc-foot"><span class="dc-price">GH₵ 130–180</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+      </div>
+    </div>
+    <div class="panel" data-p="drk">
+      <div class="dish-grid">
+        <div class="dc" data-name="Bottled Water" data-price="5"><img src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=200&q=75" alt="Water"><div class="dc-body"><div class="dc-name">Bottled Water</div><div class="dc-desc">Chilled still water.</div><div class="dc-foot"><span class="dc-price">GH₵ 5–10</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+        <div class="dc" data-name="Soft Drinks" data-price="10"><img src="https://images.unsplash.com/photo-1527960471264-932f39eb5846?w=200&q=75" alt="Soft Drinks"><div class="dc-body"><div class="dc-name">Soft Drinks</div><div class="dc-desc">Coke, Fanta, Sprite and more — ice cold.</div><div class="dc-foot"><span class="dc-price">GH₵ 10–20</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+        <div class="dc" data-name="Malt" data-price="15"><img src="https://images.unsplash.com/photo-1596803244618-8dea34c22d6b?w=200&q=75" alt="Malt"><div class="dc-body"><div class="dc-name">Malt</div><div class="dc-desc">Rich, chilled malt drink.</div><div class="dc-foot"><span class="dc-price">GH₵ 15–20</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+        <div class="dc" data-name="Local Beer" data-price="25"><img src="https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=200&q=75" alt="Beer"><div class="dc-body"><div class="dc-name">Local Beer</div><div class="dc-desc">Ice-cold bottle. Club, Star and more.</div><div class="dc-foot"><span class="dc-price">GH₵ 25–40</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+      </div>
+    </div>
+    <div class="panel" data-p="bar">
+      <div class="dish-grid">
+        <div class="dc" data-name="Cocktails" data-price="40"><img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=200&q=75" alt="Cocktails"><div class="dc-body"><div class="dc-name">Cocktails</div><div class="dc-desc">Expertly mixed house signature cocktails. Ask your server for the current list.</div><div class="dc-foot"><span class="dc-price">GH₵ 40–80</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+        <div class="dc" data-name="Mocktails" data-price="35"><img src="https://images.unsplash.com/photo-1560508180-03f285f67ded?w=200&q=75" alt="Mocktails"><div class="dc-body"><div class="dc-name">Mocktails</div><div class="dc-desc">Alcohol-free fruit blends — vibrant, refreshing, and beautifully presented.</div><div class="dc-foot"><span class="dc-price">GH₵ 35–60</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+        <div class="dc" data-name="Premium Spirits" data-price="80"><img src="https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=200&q=75" alt="Spirits"><div class="dc-body"><div class="dc-name">Premium Spirits</div><div class="dc-desc">Whisky, cognac, vodka and more — served per measure with your choice of mixer.</div><div class="dc-foot"><span class="dc-price">GH₵ 80+ / serving</span><button class="add-btn" onclick="addToCart(this)">+ Add</button></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ RESERVE ════════════════════════════════════════════════ -->
+<section class="pad" id="reserve">
+  <div class="wrap res-grid">
+    <div class="res-copy">
+      <span class="sec-label">Book a Table</span>
+      <h2 class="sec-h2">Save Your Seat<br><em>for the Night</em></h2>
+      <p>Tables fill up fast on live band Fridays and karaoke Saturdays. A small refundable deposit via Paystack secures your spot — we confirm by WhatsApp within the hour.</p>
+      <ul class="res-perks" style="margin-top:1.5rem;">
+        <li>Groups of 10+ — ask about our private corner</li>
+        <li>Birthday &amp; anniversary decoration on request</li>
+        <li>Table hold for 20 minutes past booking time</li>
+        <li>Deposit fully offset against your final bill</li>
+      </ul>
+    </div>
+    <form id="rform">
+      <div class="frow">
+        <div class="field"><label for="rn">Full Name</label><input type="text" id="rn" required placeholder="Your name"></div>
+        <div class="field"><label for="rph">Phone</label><input type="tel" id="rph" required placeholder="0XX XXX XXXX"></div>
+      </div>
+      <div class="field"><label for="rem">Email</label><input type="email" id="rem" required placeholder="For your booking receipt"></div>
+      <div class="frow">
+        <div class="field"><label for="rd">Date</label><input type="date" id="rd" required></div>
+        <div class="field"><label for="rt">Time</label><input type="time" id="rt" required></div>
+      </div>
+      <div class="field"><label for="rg">Guests</label>
+        <select id="rg" required>
+          <option value="">Select party size</option>
+          <option data-count="2">1–2 guests</option>
+          <option data-count="4">3–4 guests</option>
+          <option data-count="8">5–8 guests</option>
+          <option data-count="10">9+ guests (group)</option>
+        </select>
+      </div>
+      <div class="field"><label for="rc">Special Celebration</label>
+        <select id="rc">
+          <option data-fee="0">None — just a table</option>
+          <option data-fee="150">Birthday Package — GH₵150</option>
+          <option data-fee="200">Anniversary Package — GH₵200</option>
+          <option data-fee="0">Other — we'll discuss via WhatsApp</option>
+        </select>
+      </div>
+      <div class="field"><label for="rnt">Special Requests</label><textarea id="rnt" placeholder="Dietary needs, seating preference, occasion details..."></textarea></div>
+      <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;">Pay Deposit &amp; Reserve →</button>
+      <p class="fnote">GH₵20/guest deposit + celebration package collected securely via Paystack before your request is confirmed.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ══ GALLERY ════════════════════════════════════════════════ -->
+<section class="pad" id="gallery">
+  <div class="wrap">
+    <div class="gal-head">
+      <span class="sec-label">Gallery</span>
+      <h2 class="sec-h2">Food, Ambience &amp;<br><em>Nights to Remember</em></h2>
+    </div>
+    <div class="gal-grid">
+      <div class="gi tall"><img src="images/jollof-chicken.jpg" alt="Jollof Rice"><span class="gi-label">Signature Jollof</span></div>
+      <div class="gi"><img src="images/chicken-wings.jpg" alt="Chicken Wings"><span class="gi-label">Chicken Wings</span></div>
+      <div class="gi"><img src="images/banku-tilapia.jpg" alt="Banku & Tilapia"><span class="gi-label">Banku &amp; Tilapia</span></div>
+      <div class="gi wide"><img src="images/grilled-tilapia.jpg" alt="Grilled Tilapia"><span class="gi-label">Whole Grilled Tilapia</span></div>
+      <div class="gi"><img src="images/beef-kebab.jpg" alt="Beef Kebab"><span class="gi-label">Beef Kebab</span></div>
+      <div class="gi"><img src="images/peppered-gizzard.jpg" alt="Peppered Gizzard"><span class="gi-label">Peppered Gizzard</span></div>
+      <div class="gi"><img src="images/beef-burger.jpg" alt="Beef Burger"><span class="gi-label">Beef Burger</span></div>
+      <div class="gi tall"><img src="images/pizza-large.jpg" alt="Large Pizza"><span class="gi-label">Large Pizza</span></div>
+      <div class="gi"><img src="images/chicken-shawarma.jpg" alt="Chicken Shawarma"><span class="gi-label">Chicken Shawarma</span></div>
+      <div class="gi"><img src="images/caesar-salad.jpg" alt="Caesar Salad"><span class="gi-label">Caesar Salad</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ EVENTS ════════════════════════════════════════════════ -->
+<section class="pad" id="events">
+  <div class="wrap">
+    <div class="ev-top">
+      <div>
+        <span class="sec-label">What's On</span>
+        <h2 class="sec-h2">Live Music, Karaoke<br>&amp; <em>Reasons to Come Back</em></h2>
+      </div>
+    </div>
+    <div class="ev-grid">
+      <div class="ec"><span class="ec-tag">Every Week</span><h3>Live Band Night</h3><p>Our resident band brings groovy, smooth live sound — Afrobeat, highlife and more, keeping the dancefloor alive all night long.</p><div class="ec-when">Every Friday · From 9:00 PM</div></div>
+      <div class="ec"><span class="ec-tag">Every Week</span><h3>Karaoke Night</h3><p>Grab the mic and win the crowd. Drink specials all night for anyone brave enough to perform. All genres, all welcome.</p><div class="ec-when">Every Saturday · From 8:00 PM</div></div>
+      <div class="ec"><span class="ec-tag">Every Week</span><h3>DJ Nights</h3><p>Wild DJ sets to dance your heart out. Whether vibing solo or celebrating with a crew, the energy never drops.</p><div class="ec-when">Thursday – Sunday · From 9:00 PM</div></div>
+      <div class="ec"><span class="ec-tag">Promotion</span><h3>Happy Hour</h3><p>Buy 2 grilled platters, get a free round of house drinks for the table. Best value in Adenta.</p><div class="ec-when">Mon – Wed · 5:00 – 7:00 PM</div></div>
+      <div class="ec"><span class="ec-tag">Celebration</span><h3>Birthday Nights</h3><p>Free dessert, decoration and a shout-out from the band for birthday parties of 4 or more.</p><div class="ec-when">Every Night · Book Ahead</div></div>
+      <div class="ec"><span class="ec-tag">Private</span><h3>Private Events</h3><p>Corporate dinners, birthday celebrations and after-parties. Ask about our private corner and bespoke packages.</p><div class="ec-when">By Reservation · WhatsApp Us</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ REVIEWS ════════════════════════════════════════════════ -->
+<section class="pad" id="reviews">
+  <div class="wrap">
+    <div class="rev-head">
+      <span class="sec-label">Guest Reviews</span>
+      <h2 class="sec-h2">What Accra<br><em>Is Saying</em></h2>
+      <a href="https://maps.app.goo.gl/QV11nnqE4sXEh8iK7" target="_blank" rel="noopener" class="g-pill">⭐ <b>4.4 / 5</b> from 385+ Google Reviews — Read them here</a>
+    </div>
+    <div class="rev-grid">
+      <div class="rc"><div class="rc-stars">★★★★★</div><p>The atmosphere at Junction 5 is unmatched in Adenta. The live band on Friday had everyone on their feet — we ended up staying way longer than planned.</p><div class="rc-auth"><div class="rc-av">A</div> Ama K. — via Google</div></div>
+      <div class="rc"><div class="rc-stars">★★★★★</div><p>Came for my birthday and the staff went all out — decoration, vibes, everything. The jollof rice was incredible. Definitely coming back for karaoke Saturday.</p><div class="rc-auth"><div class="rc-av">K</div> Kwabena T. — via Google</div></div>
+      <div class="rc"><div class="rc-stars">★★★★☆</div><p>Good atmosphere with live band and DJ nights. Food quality is good. Service is friendly — may be slower on busy weekends, but the vibe makes it worth it.</p><div class="rc-auth"><div class="rc-av">N</div> Naa A. — via Google</div></div>
+    </div>
+    <div class="budget">
+      <span><b>Solo Visit</b>GH₵ 100–180 (meal + drink)</span>
+      <span><b>Two People</b>GH₵ 250–450</span>
+      <span><b>Group of 4</b>GH₵ 500–900</span>
+      <span class="budget-note">Parking available on-site — arrive early on busy nights</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ════════════════════════════════════════════════ -->
+<section class="pad" id="contact">
+  <div class="wrap con-grid">
+    <div class="con-copy">
+      <span class="sec-label">Get In Touch</span>
+      <h2 class="sec-h2">Talk to Us,<br><em>or Just Come Through</em></h2>
+      <p>Questions about group bookings, tonight's lineup, or private events — WhatsApp is the fastest way to reach us.</p>
+      <ul class="con-list">
+        <li>📍 Angel View, Adenta-West, Accra</li>
+        <li>📞 +233 24 723 1272</li>
+        <li>🕒 Mon–Sat 12:00 PM · Sun 10:30 AM</li>
+        <li>✉️ info@junction5lounge.com</li>
+      </ul>
+      <div class="cta-col">
+        <a href="https://wa.me/233247231272?text=Hi%20Junction%205%20Lounge" class="btn btn-wa" target="_blank">💬 Message on WhatsApp</a>
+        <a href="tel:+233247231272" class="btn btn-outline">📞 Call the Lounge</a>
+        <a href="mailto:info@junction5lounge.com" class="btn btn-outline">✉️ Send an Email</a>
+      </div>
+      <div class="soc">
+        <a href="https://www.instagram.com/junction5.lounge/" target="_blank" aria-label="Instagram">IG</a>
+        <a href="https://www.facebook.com/junction5.lounge/" target="_blank" aria-label="Facebook">FB</a>
+        <a href="https://www.tiktok.com/discover/junction-5-lounge-adenta-accra" target="_blank" aria-label="TikTok">TT</a>
+      </div>
+    </div>
+    <div>
+      <div class="map-wrap">
+        <iframe src="https://www.google.com/maps?cid=13038186136113752212&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Junction 5 Lounge"></iframe>
+      </div>
+      <a href="https://maps.app.goo.gl/QV11nnqE4sXEh8iK7" class="map-link" target="_blank">📍 Open in Google Maps &amp; Get Directions →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════ -->
+<footer>
+  <img src="images/junction5-logo-full.png" alt="Junction 5 Lounge" class="f-logo">
+  <div class="f-r">© 2026 Junction 5 Lounge · Adenta-West, Accra<br>Built by <a href="#">Trust God Company</a></div>
+</footer>
+
+<!-- ══ TOAST ════════════════════════════════════════════════════ -->
+<div class="toast" id="toast">🛒 Item added</div>
+
+<!-- ══ CART BAR ══════════════════════════════════════════════════ -->
+<div class="cart-bar" id="cart-bar">
+  <div class="cart-bar-left">
+    <div class="cart-bar-count" id="bar-count">0</div>
+    <span class="cart-bar-label">Items in your order</span>
+  </div>
+  <span class="cart-bar-total" id="bar-total">GH₵ 0</span>
+  <button class="cart-bar-btn" id="bar-open">View Order →</button>
+</div>
+
+<!-- ══ FLOAT BUTTONS ═══════════════════════════════════════════ -->
+<a href="https://wa.me/233247231272?text=Hi%20Junction%205%20Lounge" class="fl-wa" target="_blank" aria-label="WhatsApp">💬</a>
+<button class="fl-cart" id="cart-btn" aria-label="Cart" style="position:relative;">🛒<span class="c-badge" id="cbadge" style="display:none;">0</span></button>
+
+<!-- ══ CART DRAWER ════════════════════════════════════════════ -->
+<div class="ov" id="ov-cart">
+  <div class="drawer">
+    <div class="dh"><h3>Your Order</h3><button class="dx" id="cart-close">&times;</button></div>
+    <div class="dtype">
+      <button class="dtype-btn on" id="btn-dinein" onclick="setType('dinein')">🍽️ Dine In</button>
+      <button class="dtype-btn" id="btn-delivery" onclick="setType('delivery')">🛵 Delivery</button>
+    </div>
+    <div class="delivery-badge" id="delivery-info" style="display:none;">
+      📍 Delivery across Accra — <b>GH₵ 40 flat fee</b>
+    </div>
+    <div id="cart-items"><p class="c-empty">Nothing here yet — add dishes from the menu above.</p></div>
+    <div class="c-foot">
+      <p class="c-note">Prices shown are starting amounts. Final total confirmed after payment.</p>
+      <div class="c-fee-row" id="fee-row" style="display:none;"><span>Delivery Fee (Accra)</span><span>GH₵ 40</span></div>
+      <div class="c-tot"><span>Total</span><span id="cart-total">GH₵ 0</span></div>
+      <button class="btn btn-gold" id="cart-checkout" style="width:100%;">Pay &amp; Place Order →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ORDER CHECKOUT MODAL ═══════════════════════════════════ -->
+<div class="ov center" id="ov-order">
+  <div class="modal">
+    <h3>Confirm &amp; Pay</h3>
+    <p class="sub" id="order-sub">Pay securely via Paystack. After payment your order goes to our team via WhatsApp and email.</p>
+    <div class="m-amt" id="order-amt">GH₵ 0</div>
+    <div class="m-amt-break" id="order-break"></div>
+    <div class="field"><label>Full Name</label><input type="text" id="on" placeholder="Your full name" required></div>
+    <div class="field"><label>Phone Number</label><input type="tel" id="oph" placeholder="0XX XXX XXXX" required></div>
+    <div class="field"><label>Email</label><input type="email" id="oem" placeholder="For your payment receipt" required></div>
+    <div id="delivery-fields" style="display:none;">
+      <div class="field"><label>Delivery Area / Location</label><input type="text" id="oloc" placeholder="e.g. East Legon, Tema, Spintex..."></div>
+      <div class="field"><label>Full Delivery Address</label><textarea id="oaddr" placeholder="House number, street name, nearest landmark..."></textarea></div>
+    </div>
+    <div class="field"><label>Special Instructions</label><textarea id="ont" placeholder="Allergies, spice level, table number..."></textarea></div>
+    <button class="btn btn-gold" id="order-pay">Pay with Paystack →</button>
+    <button class="m-cancel" id="order-cancel">Cancel</button>
+  </div>
+</div>
+
+<!-- ══ RESERVATION PAYMENT MODAL ══════════════════════════════ -->
+<div class="ov center" id="ov-res">
+  <div class="modal">
+    <h3>Confirm Reservation</h3>
+    <p class="sub" id="res-sub">A refundable deposit secures your table via Paystack. After payment you'll be directed to WhatsApp and email to confirm with us.</p>
+    <div class="m-amt" id="res-amt">GH₵ 0</div>
+    <div class="m-amt-break" id="res-break"></div>
+    <button class="btn btn-gold" id="res-pay">Pay Deposit &amp; Reserve →</button>
+    <button class="m-cancel" id="res-cancel">Cancel</button>
+  </div>
+</div>
+
+<!-- ══ CONFIRMATION ════════════════════════════════════════════ -->
+<div class="ov center" id="ov-confirm">
+  <div class="modal confirm-c">
+    <div class="ico">✅</div>
+    <h3>Payment Confirmed!</h3>
+    <p class="sub">Payment received. Please confirm your order via WhatsApp or email below.</p>
+    <div class="confirm-ref" id="conf-ref">Ref: —</div>
+    <div class="conf-summary" id="conf-summary"></div>
+    <div class="conf-acts">
+      <a href="#" class="btn btn-wa" id="conf-wa" target="_blank">💬 Confirm via WhatsApp</a>
+      <a href="#" class="btn btn-outline" id="conf-email">✉️ Confirm via Email</a>
+      <a href="tel:+233247231272" class="btn btn-outline">📞 Call Us</a>
+      <button class="m-cancel" id="conf-close">Close</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://js.paystack.co/v1/inline.js"></script>
+<script>
+const CFG={PK:'pk_test_REPLACE_WITH_REAL_PAYSTACK_PUBLIC_KEY',WA:'233247231272',EMAIL:'info@junction5lounge.com',DFEE:40};
+const $=id=>document.getElementById(id);
+const openOv=id=>{$(id).classList.add('open');document.body.style.overflow='hidden';};
+const closeOv=id=>{$(id).classList.remove('open');document.body.style.overflow='';};
+const genRef=p=>`${p}-${Date.now()}-${Math.floor(Math.random()*9000+1000)}`;
+
+function pay({amount,email,ref,meta,onOk}){
+  if(typeof PaystackPop==='undefined'){alert('Payment system failed to load. Check your internet and try again.');return;}
+  if(CFG.PK.includes('REPLACE')){alert('Paystack not yet configured. Add the real public key to go live.');return;}
+  PaystackPop.setup({key:CFG.PK,email,amount:Math.round(amount*100),currency:'GHS',ref,metadata:meta,callback:r=>onOk(r.reference),onClose:()=>{}}).openIframe();
+}
+
+function showToast(msg){const t=$('toast');t.textContent='🛒 '+msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200);}
+
+function showConfirm(ref,summaryHtml,waMsg,emailSubj,emailBody){
+  $('conf-ref').textContent='Payment Ref: '+ref;
+  $('conf-summary').innerHTML=summaryHtml;
+  $('conf-wa').href=`https://wa.me/${CFG.WA}?text=${waMsg}`;
+  $('conf-email').href=`mailto:${CFG.EMAIL}?subject=${encodeURIComponent(emailSubj)}&body=${encodeURIComponent(emailBody)}`;
+  openOv('ov-confirm');
+  window.open(`https://wa.me/${CFG.WA}?text=${waMsg}`,'_blank');
+}
+
+// Header
+const hdr=$('hdr');
+window.addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>60));
+
+// Mobile nav
+const burger=$('burger'),mob=$('mob');
+burger.addEventListener('click',()=>{const o=mob.classList.toggle('open');burger.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':'';});
+document.querySelectorAll('.ml').forEach(a=>a.addEventListener('click',()=>{mob.classList.remove('open');burger.setAttribute('aria-expanded',false);document.body.style.overflow='';}));
+
+// Menu tabs
+document.querySelectorAll('.tab').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.tab').forEach(b=>b.classList.remove('on'));
+    document.querySelectorAll('.panel').forEach(p=>p.classList.remove('on'));
+    btn.classList.add('on');
+    document.querySelector(`.panel[data-p="${btn.dataset.t}"]`).classList.add('on');
+  });
+});
+
+// Cart state
+let cart=[],orderType='dinein';
+
+function setType(t){
+  orderType=t;
+  $('btn-dinein').classList.toggle('on',t==='dinein');
+  $('btn-delivery').classList.toggle('on',t==='delivery');
+  $('delivery-info').style.display=t==='delivery'?'flex':'none';
+  $('fee-row').style.display=t==='delivery'?'flex':'none';
+  renderCart();
+}
+
+function cartSub(){return cart.reduce((s,i)=>s+i.price*i.qty,0);}
+function cartTotal(){return cartSub()+(orderType==='delivery'?CFG.DFEE:0);}
+
+function renderCart(){
+  const count=cart.reduce((s,i)=>s+i.qty,0);
+  const total=cartTotal();
+  const badge=$('cbadge');
+  badge.style.display=count?'flex':'none';badge.textContent=count;
+  const bar=$('cart-bar');
+  if(count>0){bar.classList.add('show');$('bar-count').textContent=count;$('bar-total').textContent=`GH₵ ${total}`;}
+  else{bar.classList.remove('show');}
+  $('cart-total').textContent=`GH₵ ${total}`;
+  $('cart-items').innerHTML=cart.length===0
+    ?'<p class="c-empty">Nothing here yet — add dishes from the menu above.</p>'
+    :cart.map(i=>`<div class="ci">
+      <div class="ci-i"><div class="ci-n">${i.name}</div><div class="ci-p">GH₵${i.price} each</div></div>
+      <div class="qty">
+        <button onclick="chgQty('${i.name.replace(/'/g,"\\'")}', -1)">−</button>
+        <span>${i.qty}</span>
+        <button onclick="chgQty('${i.name.replace(/'/g,"\\'")}', 1)">+</button>
+      </div>
+      <button class="ci-rm" onclick="rmItem('${i.name.replace(/'/g,"\\'")}')">Remove</button>
+    </div>`).join('');
+}
+
+function addToCart(btn){
+  const dc=btn.closest('.dc');
+  const name=dc.dataset.name,price=parseFloat(dc.dataset.price);
+  const ex=cart.find(i=>i.name===name);
+  if(ex)ex.qty++;else cart.push({name,price,qty:1});
+  renderCart();
+  showToast(name.split('&')[0].trim()+' added');
+  btn.textContent='✓ Added';btn.classList.add('added');
+  setTimeout(()=>{btn.textContent='+ Add';btn.classList.remove('added');},1400);
+}
+function chgQty(name,d){const i=cart.find(x=>x.name===name);if(!i)return;i.qty+=d;if(i.qty<=0)cart=cart.filter(x=>x.name!==name);renderCart();}
+function rmItem(name){cart=cart.filter(x=>x.name!==name);renderCart();}
+
+function openCart(){openOv('ov-cart');}
+$('cart-btn').addEventListener('click',openCart);
+$('bar-open').addEventListener('click',openCart);
+$('cart-close').addEventListener('click',()=>closeOv('ov-cart'));
+$('ov-cart').addEventListener('click',e=>{if(e.target===$('ov-cart'))closeOv('ov-cart');});
+
+$('cart-checkout').addEventListener('click',()=>{
+  if(!cart.length){alert('Add at least one dish to your order first.');return;}
+  const sub=cartSub(),total=cartTotal(),isD=orderType==='delivery';
+  $('order-amt').textContent=`GH₵ ${total}`;
+  $('order-break').innerHTML=isD?`Food: GH₵${sub} + Delivery: GH₵${CFG.DFEE}`:`Dine-in order — GH₵${sub}`;
+  $('delivery-fields').style.display=isD?'block':'none';
+  closeOv('ov-cart');openOv('ov-order');
+});
+
+$('order-cancel').addEventListener('click',()=>closeOv('ov-order'));
+$('ov-order').addEventListener('click',e=>{if(e.target===$('ov-order'))closeOv('ov-order');});
+
+$('order-pay').addEventListener('click',()=>{
+  const name=$('on').value.trim(),phone=$('oph').value.trim(),email=$('oem').value.trim();
+  const loc=$('oloc')?$('oloc').value.trim():'',addr=$('oaddr')?$('oaddr').value.trim():'';
+  const notes=$('ont').value.trim(),isD=orderType==='delivery';
+  if(!name||!phone||!email){alert('Please fill in your name, phone number and email.');return;}
+  if(isD&&!loc){alert('Please enter your delivery area/location.');return;}
+  const sub=cartSub(),total=cartTotal(),ref=genRef('ORDER');
+  const lines=cart.map(i=>`• ${i.name} x${i.qty} — GH₵${i.price*i.qty}`).join('\n');
+  const waLines=cart.map(i=>`• ${i.name} x${i.qty} (GH₵${i.price*i.qty})`).join('%0A');
+  pay({amount:total,email,ref,meta:{type:'food_order',orderType,name,phone},onOk:pRef=>{
+    const sumHtml=`<b>Name:</b> ${name}<br><b>Phone:</b> ${phone}<br><b>Type:</b> ${isD?'🛵 Delivery':'🍽️ Dine In'}<br>${isD?`<b>Area:</b> ${loc}<br><b>Address:</b> ${addr}<br>`:''}<b>Items:</b><br>${cart.map(i=>`${i.name} x${i.qty}`).join('<br>')}<br><b>Total Paid:</b> GH₵${total}`;
+    const waMsg=`🍽️ PAID ORDER%0ARef: ${pRef}%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AType: ${isD?'DELIVERY':'DINE IN'}%0A${isD?`Area: ${encodeURIComponent(loc)}%0AAddress: ${encodeURIComponent(addr)}%0A`:''}Items:%0A${waLines}%0AFood Total: GH₵${sub}%0A${isD?`Delivery Fee: GH₵${CFG.DFEE}%0A`:''}TOTAL PAID: GH₵${total}%0ANotes: ${encodeURIComponent(notes||'None')}`;
+    const eSubj=`Paid Order — ${name} — Ref: ${pRef}`;
+    const eBody=`ORDER CONFIRMED — Junction 5 Lounge\n\nRef: ${pRef}\nName: ${name}\nPhone: ${phone}\nType: ${isD?'Delivery':'Dine In'}\n${isD?`Area: ${loc}\nAddress: ${addr}\n`:''}\nItems:\n${lines}\n\nFood Total: GH₵${sub}\n${isD?`Delivery Fee: GH₵${CFG.DFEE}\n`:''}TOTAL PAID: GH₵${total}\nNotes: ${notes||'None'}`;
+    closeOv('ov-order');showConfirm(pRef,sumHtml,waMsg,eSubj,eBody);
+    cart=[];renderCart();
+    $('on').value=$('oph').value=$('oem').value=$('ont').value='';
+    if($('oloc'))$('oloc').value='';if($('oaddr'))$('oaddr').value='';
+  }});
+});
+
+// Reservation
+let pendRes=null;
+$('rform').addEventListener('submit',e=>{
+  e.preventDefault();
+  const name=$('rn').value,phone=$('rph').value,email=$('rem').value;
+  const date=$('rd').value,time=$('rt').value;
+  const gSel=$('rg'),guests=gSel.value,gCount=parseInt(gSel.selectedOptions[0]?.dataset.count||'2');
+  const cSel=$('rc'),celeb=cSel.value,cFee=parseInt(cSel.selectedOptions[0]?.dataset.fee||'0');
+  const notes=$('rnt').value,deposit=gCount*20+cFee;
+  pendRes={name,phone,email,date,time,guests,celeb,notes,deposit,gCount,cFee};
+  $('res-amt').textContent=`GH₵ ${deposit}`;
+  $('res-break').innerHTML=`GH₵20 × ${gCount} guests = GH₵${gCount*20}${cFee?` + GH₵${cFee} celebration`:''}`;
+  openOv('ov-res');
+});
+$('res-cancel').addEventListener('click',()=>closeOv('ov-res'));
+$('ov-res').addEventListener('click',e=>{if(e.target===$('ov-res'))closeOv('ov-res');});
+$('res-pay').addEventListener('click',()=>{
+  if(!pendRes)return;const r=pendRes,ref=genRef('RSVP');
+  pay({amount:r.deposit,email:r.email,ref,meta:{type:'reservation',...r},onOk:pRef=>{
+    const sumHtml=`<b>Name:</b> ${r.name}<br><b>Phone:</b> ${r.phone}<br><b>Date:</b> ${r.date} at ${r.time}<br><b>Guests:</b> ${r.guests}<br><b>Celebration:</b> ${r.celeb}<br><b>Deposit Paid:</b> GH₵${r.deposit}`;
+    const waMsg=`🎉 PAID RESERVATION%0ARef: ${pRef}%0AName: ${encodeURIComponent(r.name)}%0APhone: ${encodeURIComponent(r.phone)}%0ADate: ${encodeURIComponent(r.date)}%0ATime: ${encodeURIComponent(r.time)}%0AGuests: ${encodeURIComponent(r.guests)}%0ACelebration: ${encodeURIComponent(r.celeb)}%0ADeposit: GH₵${r.deposit}%0ARequests: ${encodeURIComponent(r.notes||'None')}`;
+    const eSubj=`Paid Reservation — ${r.name} — ${r.date} — Ref: ${pRef}`;
+    const eBody=`RESERVATION CONFIRMED — Junction 5 Lounge\n\nRef: ${pRef}\nName: ${r.name}\nPhone: ${r.phone}\nDate: ${r.date} at ${r.time}\nGuests: ${r.guests}\nCelebration: ${r.celeb}\nDeposit Paid: GH₵${r.deposit}\nRequests: ${r.notes||'None'}`;
+    closeOv('ov-res');showConfirm(pRef,sumHtml,waMsg,eSubj,eBody);
+    $('rform').reset();pendRes=null;
+  }});
+});
+$('conf-close').addEventListener('click',()=>closeOv('ov-confirm'));
+$('ov-confirm').addEventListener('click',e=>{if(e.target===$('ov-confirm'))closeOv('ov-confirm');});
+</script>
+</body>
+</html>
